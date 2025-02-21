@@ -1,10 +1,54 @@
+<!DOCTYPE html>
 <html>
-  <body>
-    <h1>
-      My first extension
-    </h1>
-    <button id="startButton">Start</button>
-    <button id="stopButton">Stop</button>
-    <script src="/popup/index.js"></script>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sreality</title>
+    <link rel="stylesheet" href="bulma.min.css" />
+  </head>
+  <body style="max-width: 280px;">
+    <div class="container m-3">
+      <h1 class="title">
+        Sreality
+      </h1>
+      <div class="field">
+        <label class="label">Status</label>
+        <span class="tag is-success">Running</span>
+        <span class="tag is-danger">Stopped</span>
+      </div>
+    </div>
+
+    <div class="container m-3">
+
+      <div class="field">
+        <label for="select" class="label">Location ID</label>
+        <div class="select">
+          <select id="locationId" class="select"></select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Start date</label>
+        <div class="control">
+          <input id="startDate" type="date" class="p-2">
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">End date</label>
+        <div class="control">
+          <input id="endDate" type="date" class="p-2">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="container m-3">
+      <button id="startBtn" class="button is-success is-fullwidth my-2">Save & start</button>
+      <button id="stopBtn" class="button is-danger is-fullwidth my-2">Stop</button>
+    </div>
   </body>
+
+  <script src="/popup/index.js"></script>
 </html>
