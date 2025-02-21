@@ -1,0 +1,14 @@
+{
+  "name": "Sreality",
+  "description": "Extension is watching buildings informations on website sreality.cz based on customer filters",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "/popup/index.html",
+    "default_icon": "/images/icon.png"
+  },
+  "background": {
+    "service_worker": "service-worker.js",
+    "type": "module"
+  }
+}
