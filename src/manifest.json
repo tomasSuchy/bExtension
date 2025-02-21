@@ -1,8 +1,8 @@
 {
+  "manifest_version": 3,
   "name": "Sreality",
   "description": "Extension is watching buildings informations on website sreality.cz based on customer filters",
   "version": "1.0",
-  "manifest_version": 3,
   "action": {
     "default_popup": "/popup/index.html",
     "default_icon": "/images/icon128.png"
@@ -17,7 +17,9 @@
     "48": "images/icon48.png",
     "128": "images/icon128.png"
   },
-  "permissons": {
-    "storage": ""
-  }
+  "permissions": [
+    "storage",
+    "alarms",
+    "notifications"
+  ]
 }

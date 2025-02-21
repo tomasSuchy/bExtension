@@ -1,3 +1,4 @@
+//service-worker
 import fetchLocations from "./api/fetchLocation.js"
 
 chrome.runtime.onInstalled.addListener(details => {
@@ -16,13 +17,13 @@ chrome.runtime.onMessage.addListener(data => {
     default:
       break;
   }
-})
+});
 
 const handleOnStop = () => {
-  console.log('On stop in bg')
-}
+  console.log('On stop in bg');
+};
 
-const handleOnStart = () => {
+const handleOnStart = (prefs) => {
   console.log('On start in bg', 'prefs received:', prefs)
-  chrome.storage.local.set(prefs)
-}
+  chrome.storage.local.set(prefs);
+};
