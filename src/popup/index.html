@@ -14,8 +14,8 @@
       </h1>
       <div class="field">
         <label class="label">Status</label>
-        <span class="tag is-success">Running</span>
-        <span class="tag is-danger">Stopped</span>
+        <span id="runningSpan" class="tag is-success">Running</span>
+        <span id="stoppedSpan" class="tag is-danger">Stopped</span>
       </div>
     </div>
 
@@ -24,9 +24,9 @@
       <div class="field">
         <label for="select" class="label">Location ID</label>
         <div class="select">
-          <select id="locationId" class="select">
-          </select>
+          <select id="locationId" class="select"></select>
         </div>
+        <p id="locationIdError" class="help is-danger" style="display: none;">Please select a valid location.</p>
       </div>
 
       <div class="field">
@@ -34,6 +34,7 @@
         <div class="control">
           <input id="startDate" type="date" class="p-2">
         </div>
+        <p id="startDateError" class="help is-danger" style="display: none;">Please enter a valid start date.</p>
       </div>
 
       <div class="field">
@@ -41,6 +42,7 @@
         <div class="control">
           <input id="endDate" type="date" class="p-2">
         </div>
+        <p id="endDateError" class="help is-danger" style="display: none;">Please enter a valid end date.</p>
       </div>
 
     </div>
